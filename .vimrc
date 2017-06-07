@@ -1,0 +1,10 @@
+set nocompatible
+set number
+set hlsearch
+set incsearch
+set hidden
+syntax on
+set ignorecase
+set smartcase
+set showcmd
+set backspace=indent,eol,start
