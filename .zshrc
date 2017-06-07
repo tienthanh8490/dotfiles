@@ -100,12 +100,12 @@ export PATH="/Users/thanhnguyen/anaconda3/bin:$PATH"
 alias config='/usr/bin/git --git-dir=/Users/thanhnguyen/.cfg/ --work-tree=/Users/thanhnguyen'
 
 alias flushhostcache="sudo dscacheutil -flushcache"
-alias focus="echo 'cat ~/blocked_hosts > /etc/hosts' | sudo zsh && flushhostcache && killall -9 'Google Chrome' && open -a '/Applications/Google Chrome.app'"
+alias focus="echo 'cat ~/.blocked_hosts > /etc/hosts' | sudo zsh && flushhostcache && killall -9 'Google Chrome' && open -a '/Applications/Google Chrome.app'"
 
 # https://stackoverflow.com/questions/7131670/make-bash-alias-that-takes-parameter
 # https://stackoverflow.com/questions/7131670/make-bash-alias-that-takes-parameter#comment36589234_7131683
 remind(){
-	. ~/timer.sh $1 $2 $3 &
+	. ~/.timer.sh $1 $2 $3 &
 }
 
 # ORDER
