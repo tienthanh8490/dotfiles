@@ -310,3 +310,7 @@ SPACESHIP_VI_MODE_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
 SPACESHIP_VI_MODE_INSERT="[I]"
 SPACESHIP_VI_MODE_NORMAL="[N]"
 SPACESHIP_VI_MODE_COLOR="white"
+
+eval $(thefuck --alias)
+
+alias kerasinit="source activate aind-dog && KERAS_BACKEND=tensorflow python -c \"from keras import backend\""
