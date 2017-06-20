@@ -109,7 +109,7 @@ remind(){
 }
 
 torrent(){
-	webtorrent $1 -o ~/Downloads/movies/	
+	webtorrent $1 -o ~/Downloads/torrents/	
 }
 
 # ORDER
