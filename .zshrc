@@ -108,6 +108,10 @@ remind(){
 	. ~/.timer.sh $1 $2 $3 &
 }
 
+torrent(){
+	webtorrent $1 -o ~/Downloads/movies/	
+}
+
 # ORDER
 SPACESHIP_PROMPT_ORDER=(
   time
