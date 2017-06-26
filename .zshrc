@@ -1,5 +1,6 @@
-
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Wireshark.app/Contents/MacOS"
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/thanhnguyen/.oh-my-zsh
