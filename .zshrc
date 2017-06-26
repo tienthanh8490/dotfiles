@@ -323,3 +323,6 @@ alias kerasinit="source activate aind-dog && KERAS_BACKEND=tensorflow python -c 
 export BROWSER=open
 
 alias src="source ~/.zshrc"
+
+# Remove duplicate PATH entries
+typeset -U PATH
