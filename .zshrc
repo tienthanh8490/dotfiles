@@ -94,7 +94,7 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 # added by Anaconda3 4.4.0 installer
-export PATH="/Users/thanhnguyen/anaconda3/bin:$PATH"
+# export PATH="/Users/thanhnguyen/anaconda3/bin:$PATH"
 
 # dotfiles config
 alias config='/usr/bin/git --git-dir=/Users/thanhnguyen/.cfg/ --work-tree=/Users/thanhnguyen'
@@ -321,3 +321,5 @@ alias kerasinit="source activate aind-dog && KERAS_BACKEND=tensorflow python -c 
 
 # Fix jupyter bug unable to open browser
 export BROWSER=open
+
+alias src="source ~/.zshrc"
