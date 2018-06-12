@@ -95,6 +95,7 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 # added by Anaconda3 4.4.0 installer
+# uncomment to use anaconda python. otherwise pyenv python is used.
 # export PATH="/Users/thanhnguyen/anaconda3/bin:$PATH"
 
 # dotfiles config
@@ -325,5 +326,14 @@ export BROWSER=open
 
 alias src="source ~/.zshrc"
 
+# aws cli
+export PATH=~/.local/bin:$PATH
+
 # Remove duplicate PATH entries
 typeset -U PATH
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+export PATH=$PATH:~/terraform
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
