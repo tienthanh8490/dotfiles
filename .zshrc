@@ -329,6 +329,11 @@ alias src="source ~/.zshrc"
 # aws cli
 export PATH=~/.local/bin:$PATH
 
+# golang
+export PATH=/usr/local/go/bin:$PATH
+export PATH=$PATH:$(go env GOPATH)/bin
+export GOPATH=$(go env GOPATH)
+
 # Remove duplicate PATH entries
 typeset -U PATH
 
