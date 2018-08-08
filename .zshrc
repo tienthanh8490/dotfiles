@@ -326,6 +326,9 @@ export BROWSER=open
 
 alias src="source ~/.zshrc"
 
+# https://apple.stackexchange.com/questions/313717/how-to-hide-facetime-audio-macos-high-sierra-version-10-13
+alias hidefacetime="killall -kill FaceTimeNotificationCenterService"
+
 # aws cli
 export PATH=~/.local/bin:$PATH
 
