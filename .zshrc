@@ -8,7 +8,7 @@ export ZSH=/Users/thanhnguyen/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="spaceship"
+ZSH_THEME=powerlevel10k/powerlevel10k
 # ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -90,9 +90,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export PATH="/Users/thanhnguyen/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# export PATH="/Users/thanhnguyen/.pyenv/bin:$PATH"
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
 
 # added by Anaconda3 4.4.0 installer
 # uncomment to use anaconda python. otherwise pyenv python is used.
@@ -114,212 +114,9 @@ torrent(){
 	webtorrent $1 -o ~/Downloads/torrents/	
 }
 
-# ORDER
-SPACESHIP_PROMPT_ORDER=(
-  time
-  user
-  host
-  dir
-  git
-  hg
-  node
-  ruby
-  xcode
-  swift
-  golang
-  php
-  rust
-  julia
-  docker
-  venv
-  pyenv
-  exec_time
-  line_sep
-  vi_mode
-  char
-)
-
-# PROMPT
-SPACESHIP_PROMPT_SYMBOL="➜"
-SPACESHIP_PROMPT_ADD_NEWLINE=true
-SPACESHIP_PROMPT_SEPARATE_LINE=true
-SPACESHIP_PROMPT_PREFIXES_SHOW=true
-SPACESHIP_PROMPT_SUFFIXES_SHOW=true
-SPACESHIP_PROMPT_DEFAULT_PREFIX="via "
-SPACESHIP_PROMPT_DEFAULT_SUFFIX=" "
-
-# TIME
-SPACESHIP_TIME_SHOW=false
-SPACESHIP_TIME_PREFIX="at "
-SPACESHIP_TIME_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
-SPACESHIP_TIME_FORMAT=false
-SPACESHIP_TIME_12HR=false
-SPACESHIP_TIME_COLOR="yellow"
-
-# EXECUTION TIME
-SPACESHIP_EXEC_TIME_SHOW="${SPACESHIP_EXEC_TIME_SHOW:=true}"
-SPACESHIP_EXEC_TIME_PREFIX="${SPACESHIP_EXEC_TIME_PREFIX:="took "}"
-SPACESHIP_EXEC_TIME_SUFFIX="${SPACESHIP_EXEC_TIME_SUFFIX:="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"}"
-SPACESHIP_EXEC_TIME_COLOR="${SPACESHIP_EXEC_TIME_COLOR:="yellow"}"
-SPACESHIP_EXEC_TIME_THRESHOLD="${SPACESHIP_EXEC_TIME_THRESHOLD:=5000}"
-SPACESHIP_EXEC_TIME_MS="${SPACESHIP_EXEC_TIME_MS:=false}"
-
-# USER
-SPACESHIP_USER_SHOW=true
-SPACESHIP_USER_PREFIX="with "
-SPACESHIP_USER_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
-SPACESHIP_USER_COLOR="yellow"
-SPACESHIP_USER_COLOR_ROOT="red"
-
-# HOST
-SPACESHIP_HOST_SHOW=true
-SPACESHIP_HOST_PREFIX="at "
-SPACESHIP_HOST_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
-SPACESHIP_HOST_COLOR="green"
-
-# DIR
-SPACESHIP_DIR_SHOW=true
-SPACESHIP_DIR_PREFIX="in "
-SPACESHIP_DIR_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
-SPACESHIP_DIR_TRUNC=3
-SPACESHIP_DIR_COLOR="cyan"
-
-# GIT
-SPACESHIP_GIT_SHOW=true
-SPACESHIP_GIT_PREFIX="on "
-SPACESHIP_GIT_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
-SPACESHIP_GIT_SYMBOL=" "
-# GIT BRANCH
-SPACESHIP_GIT_BRANCH_SHOW=true
-SPACESHIP_GIT_BRANCH_PREFIX="$SPACESHIP_GIT_SYMBOL"
-SPACESHIP_GIT_BRANCH_SUFFIX=""
-SPACESHIP_GIT_BRANCH_COLOR="magenta"
-# GIT STATUS
-SPACESHIP_GIT_STATUS_SHOW=true
-SPACESHIP_GIT_STATUS_PREFIX=" ["
-SPACESHIP_GIT_STATUS_SUFFIX="]"
-SPACESHIP_GIT_STATUS_COLOR="red"
-SPACESHIP_GIT_STATUS_UNTRACKED="?"
-SPACESHIP_GIT_STATUS_ADDED="+"
-SPACESHIP_GIT_STATUS_MODIFIED="!"
-SPACESHIP_GIT_STATUS_RENAMED="»"
-SPACESHIP_GIT_STATUS_DELETED="✘"
-SPACESHIP_GIT_STATUS_STASHED="$"
-SPACESHIP_GIT_STATUS_UNMERGED="="
-SPACESHIP_GIT_STATUS_AHEAD="⇡"
-SPACESHIP_GIT_STATUS_BEHIND="⇣"
-SPACESHIP_GIT_STATUS_DIVERGED="⇕"
-
-# HG
-SPACESHIP_HG_SHOW=true
-SPACESHIP_HG_PREFIX="on "
-SPACESHIP_HG_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
-SPACESHIP_HG_SYMBOL="☿ "
-# HG BRANCH
-SPACESHIP_HG_BRANCH_SHOW=true
-SPACESHIP_HG_BRANCH_PREFIX="$SPACESHIP_HG_SYMBOL"
-SPACESHIP_HG_BRANCH_SUFFIX=""
-SPACESHIP_HG_BRANCH_COLOR="magenta"
-# HG STATUS
-SPACESHIP_HG_STATUS_SHOW=true
-SPACESHIP_HG_STATUS_PREFIX="["
-SPACESHIP_HG_STATUS_SUFFIX="]"
-SPACESHIP_HG_STATUS_COLOR="red"
-SPACESHIP_HG_STATUS_UNTRACKED="?"
-SPACESHIP_HG_STATUS_ADDED="+"
-SPACESHIP_HG_STATUS_MODIFIED="!"
-SPACESHIP_HG_STATUS_DELETED="✘"
-
-# NODE
-SPACESHIP_NODE_SHOW=true
-SPACESHIP_NODE_PREFIX="$SPACESHIP_PROMPT_DEFAULT_PREFIX"
-SPACESHIP_NODE_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
-SPACESHIP_NODE_SYMBOL="⬢ "
-SPACESHIP_NODE_DEFAULT_VERSION=""
-SPACESHIP_NODE_COLOR="green"
-
-# RUBY
-SPACESHIP_RUBY_SHOW=true
-SPACESHIP_RUBY_PREFIX="$SPACESHIP_PROMPT_DEFAULT_PREFIX"
-SPACESHIP_RUBY_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
-SPACESHIP_RUBY_SYMBOL="💎 "
-SPACESHIP_RUBY_COLOR="red"
-
-# XCODE
-SPACESHIP_XCODE_SHOW_LOCAL=true
-SPACESHIP_XCODE_SHOW_GLOBAL=false
-SPACESHIP_XCODE_PREFIX="$SPACESHIP_PROMPT_DEFAULT_PREFIX"
-SPACESHIP_XCODE_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
-SPACESHIP_XCODE_SYMBOL="🛠 "
-SPACESHIP_XCODE_COLOR="blue"
-
-# SWIFT
-SPACESHIP_SWIFT_SHOW_LOCAL=true
-SPACESHIP_SWIFT_SHOW_GLOBAL=false
-SPACESHIP_SWIFT_PREFIX="$SPACESHIP_PROMPT_DEFAULT_PREFIX"
-SPACESHIP_SWIFT_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
-SPACESHIP_SWIFT_SYMBOL="🐦 "
-SPACESHIP_SWIFT_COLOR="yellow"
-
-# GOLANG
-SPACESHIP_GOLANG_SHOW=true
-SPACESHIP_GOLANG_PREFIX="$SPACESHIP_PROMPT_DEFAULT_PREFIX"
-SPACESHIP_GOLANG_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
-SPACESHIP_GOLANG_SYMBOL="🐹 "
-SPACESHIP_GOLANG_COLOR="cyan"
-
-# PHP
-SPACESHIP_PHP_SHOW=true
-SPACESHIP_PHP_PREFIX="$SPACESHIP_PROMPT_DEFAULT_PREFIX"
-SPACESHIP_PHP_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
-SPACESHIP_PHP_SYMBOL="🐘 "
-SPACEHIP_PHP_COLOR="blue"
-
-# RUST
-SPACESHIP_RUST_SHOW=true
-SPACESHIP_RUST_PREFIX="$SPACESHIP_PROMPT_DEFAULT_PREFIX"
-SPACESHIP_RUST_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
-SPACESHIP_RUST_SYMBOL="𝗥 "
-SPACESHIP_RUST_COLOR="red"
-
-# JULIA
-SPACESHIP_JULIA_SHOW=true
-SPACESHIP_JULIA_PREFIX="$SPACESHIP_PROMPT_DEFAULT_PREFIX"
-SPACESHIP_JULIA_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
-SPACESHIP_JULIA_SYMBOL="ஃ "
-SPACESHIP_JULIA_COLOR="green"
-
-# DOCKER
-SPACESHIP_DOCKER_SHOW=true
-SPACESHIP_DOCKER_PREFIX="on "
-SPACESHIP_DOCKER_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
-SPACESHIP_DOCKER_SYMBOL="🐳 "
-SPACESHIP_DOCKER_COLOR="cyan"
-
-# VENV
-SPACESHIP_VENV_SHOW=true
-SPACESHIP_VENV_PREFIX="$SPACESHIP_PROMPT_DEFAULT_PREFIX"
-SPACESHIP_VENV_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
-SPACESHIP_VENV_COLOR="blue"
-
-# PYENV
-SPACESHIP_PYENV_SHOW=true
-SPACESHIP_PYENV_PREFIX="$SPACESHIP_PROMPT_DEFAULT_PREFIX"
-SPACESHIP_PYENV_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
-SPACESHIP_PYENV_SYMBOL="🐍 "
-SPACESHIP_PYENV_COLOR="yellow"
-
-# VI_MODE
-SPACESHIP_VI_MODE_SHOW=true
-SPACESHIP_VI_MODE_PREFIX=""
-SPACESHIP_VI_MODE_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
-SPACESHIP_VI_MODE_INSERT="[I]"
-SPACESHIP_VI_MODE_NORMAL="[N]"
-SPACESHIP_VI_MODE_COLOR="white"
-
 eval $(thefuck --alias)
 
-alias kerasinit="source activate aind-dog && KERAS_BACKEND=tensorflow python -c \"from keras import backend\""
+# alias kerasinit="source activate aind-dog && KERAS_BACKEND=tensorflow python -c \"from keras import backend\""
 
 # Fix jupyter bug unable to open browser
 export BROWSER=open
@@ -345,3 +142,52 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 export PATH=$PATH:~/terraform
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+###-begin-pm2-completion-###
+### credits to npm for the completion file model
+#
+# Installation: pm2 completion >> ~/.bashrc  (or ~/.zshrc)
+#
+
+COMP_WORDBREAKS=${COMP_WORDBREAKS/=/}
+COMP_WORDBREAKS=${COMP_WORDBREAKS/@/}
+export COMP_WORDBREAKS
+
+if type complete &>/dev/null; then
+  _pm2_completion () {
+    local si="$IFS"
+    IFS=$'\n' COMPREPLY=($(COMP_CWORD="$COMP_CWORD" \
+                           COMP_LINE="$COMP_LINE" \
+                           COMP_POINT="$COMP_POINT" \
+                           pm2 completion -- "${COMP_WORDS[@]}" \
+                           2>/dev/null)) || return $?
+    IFS="$si"
+  }
+  complete -o default -F _pm2_completion pm2
+elif type compctl &>/dev/null; then
+  _pm2_completion () {
+    local cword line point words si
+    read -Ac words
+    read -cn cword
+    let cword-=1
+    read -l line
+    read -ln point
+    si="$IFS"
+    IFS=$'\n' reply=($(COMP_CWORD="$cword" \
+                       COMP_LINE="$line" \
+                       COMP_POINT="$point" \
+                       pm2 completion -- "${words[@]}" \
+                       2>/dev/null)) || return $?
+    IFS="$si"
+  }
+  compctl -K _pm2_completion + -f + pm2
+fi
+###-end-pm2-completion-###
+alias python=python3
+alias pip=pip3
+export NVM_SYMLINK_CURRENT=true
+
